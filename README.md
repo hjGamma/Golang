@@ -4,9 +4,11 @@ https://www.kancloud.cn/jiajunxi/ginweb100/1801414
 
 gin语法
 ---------------------------------------------------------------------------------------------
-gin.BasicAuth 是一个 Gin 中间件，用于处理 HTTP 基本认证。它会拦截请求，并验证请求头中的 Authorization 字段。
-gin.Accounts 是用于定义一个 map[string]string，其中键是用户名，值是密码。它用于存储一组用户名和密码的组合。
-gin.Default()用于创建一个包含默认中间件（如日志和恢复中间件）的 *gin.Engine 实例。
+1. gin.BasicAuth 是一个 Gin 中间件，用于处理 HTTP 基本认证。它会拦截请求，并验证请求头中的 Authorization 字段。
+
+2. gin.Accounts 是用于定义一个 map[string]string，其中键是用户名，值是密码。它用于存储一组用户名和密码的组合。
+
+3. gin.Default()用于创建一个包含默认中间件（如日志和恢复中间件）的 *gin.Engine 实例。
 
 -----------------------------------------------------------------------------------------------
 r := gin.Default()中r包含的方法
@@ -91,5 +93,5 @@ c.SaveUploadedFile(file *multipart.FileHeader, dst string) error：将上传的�
 c.Error(err error)：记录请求过程中的错误。
 c.Errors：包含所有已记录的错误，可以在请求结束后进行统一处理或日志记录。
 
-7.重定向
+7. 重定向
 c.Redirect(statusCode int, url string)：重定向到指定的 URL。
